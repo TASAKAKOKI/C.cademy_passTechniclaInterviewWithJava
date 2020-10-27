@@ -1,0 +1,42 @@
+Review
+    Nice work – you’ve built out a Stack class that can:
+        - Add a new item to the top using .push()
+        - Remove an item from the top and return its value using .pop()
+        - Return the value of the top item using .peek()
+        - Maintain awareness of overflow and underflow using this.size and this.maxSize
+    Let’s use what you just learned in a real life Stack application!
+
+Instructions
+    1.
+    We’ve created a class called PizzaDelivery.java that stacks up pizza for delivery. Once there are 5 pizzas in the deliveryGal stack, additional pizzas are stacked onto the pizzaHouse stack.
+
+    .assign(): this method assigns pizzas to the appropriate stack.
+    .deliver(): this method removes pizzas from the deliveryGal stack.
+    To start, in the constructor, instantiate deliveryGal as a stack with a maximum size of 5. Also instantiate pizzaHouse as a stack with no maximum size.
+
+
+    2.
+    Inside the .assign() method, we loop through each pizza and push each one to this.deliveryGal until there is overflow. We implement this using a try/catch statement.
+
+    In the try statement, push each pizza to this.deliveryGal and print the following statement:
+
+    System.out.println(pizza + " pizza added to deliveryGal stack.");
+
+    3.
+    If there is overflow, an error will catch and we start adding to this.pizzaHouse.
+
+    In the catch statement, push each pizza to this.pizzaHouse and print the following statement:
+
+    System.out.println("deliveryGal left to make deliveries! " + pizza + " pizza added to pizzaHouse stack.");
+
+    4.
+    Let’s deliver pizza! Inside the .deliver() method, we loop through each pizza on the this.deliveryGal stack.
+
+    In each iteration of the for loop, use a Stack method to remove a pizza and assign that value to a String pizzaType. Also print the message:
+
+    System.out.println(pizzaType + " pizza delivered!");
+
+    5.
+    Check out your program! You’ll be able to see the sequence of actions taken in the process of delivering pizzas. Notice how the first pizza that was added to the this.deliveryGal stack is the last one to be delivered.
+
+    You’ve now completed your first program using stacks. Awesome job!
