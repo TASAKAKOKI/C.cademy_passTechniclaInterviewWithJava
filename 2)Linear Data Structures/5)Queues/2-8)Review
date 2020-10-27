@@ -1,0 +1,35 @@
+Java Queues Review
+    Great work! You’ve just implemented a queue data structure in Java by creating a Queue class that:
+
+    Follows FIFO protocol with .enqueue() and .dequeue() methods
+    Gives you the option to create bounded queues with the maxSize property
+    Prevents queue underflow and overflow by keeping track of queue size
+    Let’s apply what you just learned to round out your review of queues in Java!
+
+Instructions
+    1.
+    Let’s interact with some queues. We have created a program in Script.java that uses the methods and variables of the RestaurantOrders.java file to assign restaurant food orders to either a Head Chef, Sous Chef or a waiting list. At the moment, the RestaurantOrders class is not finished, so let’s complete it by adding code to its variables and methods!
+
+    Instantiate headChef and sousChef as bounded queues within the RestaurantOrders class constructor, both with a maximum size of 3. This is the limit of how many orders one chef can work on at a time. Also instantiate waitingList as an unbounded queue within the constructor. The waiting list of unattended orders does not have a limit. Run RestaurantOrders.java.
+
+    2.
+    We will loop through the food orders and assign each one to a chef. We will write code in the .assign() method found in RestaurantOrders.java. In the try/catch statement, we will assign orders to headChef until that queue is full (an error is thrown by the Queue class). If this happens, we start assigning orders to sousChef.
+
+    Let’s start with the headChef orders. Within the try statement in the for-each loop, enqueue each order onto the headChef queue. Then print out the exact statement :
+        "Order for " + order + " taken by Head Chef."
+
+    3.
+    If we try to add to a full headChef, an error will be thrown. We will catch this error and should then begin assigning orders to sousChef. Within the catch statement, enqueue each order to sousChef. Then print out the exact statement:
+        "Head Chef is busy! Assign " + order + " order to Sous Chef."
+
+    4.
+    But wait, we need to account for the case when sousChef becomes full! Within the catch statement, add a line of code that verifies that sousChef has space before enqueuing an order and printing the "Head chef is busy!" statement.
+
+    5.
+    If sousChef cannot take any further orders, we need to indicate that both chefs are busy. Add an else statement that enqueues any left over orders to waitingList and prints the exact message:
+        "Both chefs are busy! Add " + order + " order to the waiting list."
+
+    6.
+    Check your work. Click on the tab at the top of the text editor to see the Script.java file. Run the code in this file to see the messages logged to the terminal. The orders should be properly assigned to the chefs and then the waiting list.
+
+    You’ve now completed your first program using queues. You nailed it!
