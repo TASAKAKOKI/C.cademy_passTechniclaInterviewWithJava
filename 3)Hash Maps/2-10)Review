@@ -1,0 +1,22 @@
+Review
+    Now that we have all of the functionality of a hash map, it’s time to review what we’ve learned. Use what you know about hash maps to track birds for New York’s annual bird census.
+
+Instructions
+    1.
+    Create a HashMap, birdCensus in our .main() method. We’ll use the hash map data structure to store all bird sightings. Give it an array size of 15.
+
+    2.
+    It’s essential for our census that we know the type of bird seen and the location where it was spotted.
+
+    Assign the following key-value pairs to birdCensus:
+        - Key: "mandarin duck", Value: "Central Park Pond"
+        - Key: "monk parakeet", Value: "Brooklyn College"
+        - Key: "horned owl", Value: "Pelham Bay Park"
+
+    3.
+    Retrieve the location for each of the three birds counted in birdCensus. Print them to the terminal.
+
+    4.
+    Congratulations, you implemented a fully-functional hash map! Some things to consider:
+        : How would you delete a key-value pair from this hash map?
+        : Are there any other ways of handling collisions besides separate chaining? What would be the advantages or disadvantages of a method of avoiding separate chaining?
