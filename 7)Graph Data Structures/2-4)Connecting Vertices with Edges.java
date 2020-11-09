@@ -15,6 +15,13 @@ Instructions
     Next, create an Edge instance to represent the connection from this vertex instance to the endVertex. For now, pass in null for the third argument. We will revisit this in a later exercise to support weighted graphs.
 
     Add the Edge instance to the vertex’s list of edges to open the connection from one vertex to another.
+        When creating an instance of an object, you will want to pass in arguments that the object’s class expects in the constructor. The Edge class expects the following arguments: a starting Vertex instance, an ending Vertex instance, and a weight integer. We should use this as the Vertex instance for the first argument, followed by the endVertex parameter for the second argument, and finally null for the third argument.
+
+        You can either add the new Edge instance directly into the list of edges, or store the Edge instance to a temporary variable and add that variable into the list of edges.
+
+        To verify that we can successfully create an edge between two vertices, create two vertices in the Vertex’s main() method with any value. Add an edge from the first vertex to the second vertex by calling .addEdge() on the first vertex (the vertex at the start of the edge), and passing the second vertex (the vertex at the end of the edge) as an argument.
+
+        Print out the resulting connection by calling the .print() method on the first vertex and pass in false to omit the weight. We should see that the first vertex points to the second vertex. You can also call the .print() method on the second vertex to verify that it has no connections to the first vertex.
 
     3.
     We’re ready to connect vertices with edges through our Graph class. In the Graph class, create a public .addEdge() method that does not return anything and expects two Vertex parameters, vertex1 and vertex2. We will use them to create edges between each other.
