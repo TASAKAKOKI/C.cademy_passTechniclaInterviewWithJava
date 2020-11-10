@@ -1,9 +1,9 @@
 Breadth-First Traversal (First layer)
-    Now it’s time to focus on breadth-first traversal! As a reminder, the breadth-first traversal iterates through the graph in layers. It goes down one layer, which comprises the start vertex’s direct neighbors. Then it proceeds down to the next layer which consists of all the vertices that are neighbors of the vertices in the previous layer.
+    Now it’s time to focus on breadth-first traversal! As a reminder, the "breadth-first traversal iterates through the graph in layers". It goes down one layer, which comprises the start vertex’s direct neighbors. Then it proceeds down to the next layer which consists of all the vertices that are neighbors of the vertices in the previous layer.
 
-    For this exercise, we’ll focus on traversing down one layer. We will take a similar approach as we did with the depth-first traversal by keeping an array of visitedVertices to prevent us from iterating through the same vertices.
+    For this exercise, we’ll focus on traversing down one layer. We will take a similar approach as we did with the depth-first traversal by "keeping an array of visitedVertices to prevent us from iterating through the same vertices".
 
-    However, we will iterate through all of the direct neighbor vertices instead of iterating down the neighbor’s first edge. We will also use a queue to traverse through the graph instead of recursion to explore the different ways we can implement the traversals.
+    However, "we will iterate through all of the direct neighbor vertices" instead of iterating down the neighbor’s first edge. "We will also use a queue to traverse through the graph" instead of recursion to explore the different ways we can implement the traversals.
 
     We will reuse the same test graph that was used in the depth-first traversal implementation.
 
@@ -30,3 +30,10 @@ Instructions
     We can now successfully iterate through all of the start vertex’s neighbors. To check that we are “visiting” the right vertices, print out the visitedVertices right before the end of the method.
 
     In the .main() method, go ahead and call the .breadthFirstTraversal() method with the startingVertex and visitedVertices as parameters. When we run the function with our test graph, we should see 3 different Vertex objects in the array.
+        Since the ".breadthFirstTraversal() method is static", it "belongs to the class" 'instead of an instance of the class'. In order to call the method, "we will have to use the class itself to reference the method". Consider the following class, Foo, with the static method, .bar():
+            public class Foo {
+                public static void bar() {}
+            }
+
+        In order to make a call to .bar(), we need the following statement:
+            Foo.bar();
