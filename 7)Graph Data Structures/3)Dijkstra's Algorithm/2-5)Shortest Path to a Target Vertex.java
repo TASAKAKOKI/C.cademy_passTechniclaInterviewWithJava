@@ -55,6 +55,10 @@ Instructions
     Inside the loop, call .add() on path and pass in 0 and the vertex tempVertex. This will allow the vertex to be inserted at the beginning of the array instead of the end.
 
     We will also want to update tempVertex to be the previous vertex so it can get added in. Set tempVertex to the tempVertex’s data in previous.
+        while(tempVertex.getData() != "Null"){
+            path.add(0, tempVertex);
+            tempVertex = (Vertex) previous.get(tempVertex.getData());
+        }
 
     7.
     Next, we want to print to the terminal the message Shortest Path with the shortest path printed out on the next line.
