@@ -5,12 +5,12 @@ Depth-First Traversal (Unique Visits)
 
 Instructions
     1.
-    To set up the list of visited vertices, we need to pass it in to every call to the .depthFirstTraversal() method. Add a second parameter to the method, and call it visitedVertices. It is an ArrayList that contains the Vertex type.
+    To set up the list of visited vertices, we need to pass it in to every call to the .depthFirstTraversal() method. Add a second parameter to the method, and call it "visitedVertices". It is an "ArrayList that contains the Vertex type".
 
     We can assume that when the method is first called, the visitedVertices already contains the start vertex. Go ahead and update the recursive call to include the visitedVertices as the second parameter, and the call to .depthFirstTraversal() in the .main() method to include the visitedVertices.
 
     2.
-    Now we should use the visitedVertices to ensure we don’t visit the same vertex more than once. Wrap the recursive call to the .depthFirstTraversal() function with an if statement that checks if the visitedVertices does not contain the neighbor vertex.
+    Now we should use the "visitedVertices" to "ensure we don’t visit the same vertex more than once". Wrap the recursive call to the .depthFirstTraversal() function with an if statement that checks if the visitedVertices does not contain the neighbor vertex.
 
     Whenever we make another call to traverse down the paths, we visit a new vertex, so we should update the list of visitedVertices to reflect that. Inside the if statement, add the neighbor vertex to the array of visitedVertices.
 
